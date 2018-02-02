@@ -58,6 +58,9 @@ on init
 	write /proc/sys/kernel/sched_rt_runtime_us "-1"
     write /proc/sys/kernel/sched_rt_period_us 1000000
 
+# Use higher control-temperature for IPA (default: 45)
+    write /sys/power/ipa/control_temp "65"
+
     mkdir /dev/cpuset/top-app
     write /dev/cpuset/top-app/cpus 0-7
     mkdir /dev/cpuset/foreground
