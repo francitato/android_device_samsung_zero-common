@@ -26,23 +26,18 @@
     </style>
 
     <style name="Theme.Main.PreferenceCategoryStyle" parent="@*android:style/Preference.DeviceDefault.Category">
-        <item name="allowDividerAbove">true</item>
     </style>
 
     <style name="Theme.Main.PreferenceFragmentStyle" parent="@*android:style/PreferenceFragment.Material">
     </style>
 
     <style name="Theme.Main.PreferenceStyle" parent="@*android:style/Preference.DeviceDefault">
-        <item name="allowDividerAbove">false</item>
-        <item name="allowDividerBelow">true</item>
     </style>
 
     <style name="Theme.Main.PreferenceTheme">
     </style>
 
     <style name="Theme.Main.DialogPreferenceStyle" parent="@*android:style/Preference.DeviceDefault.DialogPreference">
-        <item name="allowDividerAbove">false</item>
-        <item name="allowDividerBelow">true</item>
     </style>
 
     <style name="Theme.Main.SwitchPreferenceStyle" parent="@style/Theme.Main.PreferenceStyle">
