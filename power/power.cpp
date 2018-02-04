@@ -76,6 +76,7 @@ static int power_open(const hw_module_t *module, const char *name, hw_device_t *
 
 				instance = dev;
 				power = container_of(dev, struct sec_power_module, base);
+                pthread_mutex_init(&power->lock,NULL);
 			} else {
 				retval = -ENOMEM;
 			}
@@ -515,7 +516,7 @@ struct sec_power_module HAL_MODULE_INFO_SYM = {
 		.setInteractive = power_set_interactive,
 	},
 
-	.lock = PTHREAD_MUTEX_INITIALIZER,
+	.lock = nullptr,
 
 	.profile = {
 		.current = PROFILE_BALANCED,
