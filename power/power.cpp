@@ -516,6 +516,8 @@ struct sec_power_module HAL_MODULE_INFO_SYM = {
 		.setInteractive = power_set_interactive,
 	},
 
+	.lock = nullptr,
+
 	.profile = {
 		.current = PROFILE_BALANCED,
 		.requested = PROFILE_BALANCED,
