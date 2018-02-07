@@ -1249,17 +1249,3 @@ service ipsec-daemon /system/bin/IPSecService
     socket ipsec_socket stream 660 system system
     user system
     group system net_raw inet net_admin
-
-# A stopping zygote may indicate a soft-reboot. for a proper recognition
-# of the SIM-card after such a soft-reboot, stop our radio-daemon here
-on property:init.svc.zygote=stopping
-	stop ril-daemon
-	stop ril-daemon1
-	stop cpboot-daemon
-
-# If zygote restarts after dying, it's a good time to start our
-# radio-daemon again, but make sure that the modem-loader starts first
-on property:init.svc.zygote=restarting
-	start cpboot-daemon
-	start ril-daemon
-	start ril-daemon1
