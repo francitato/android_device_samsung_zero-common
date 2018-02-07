@@ -44,6 +44,10 @@ ifneq (,$(wildcard lineage-sdk/ vendor/cmsdk/))
   LOCAL_CFLAGS += -DPOWER_HAS_LINEAGE_HINTS
 endif
 
+ifneq (,$(wildcard hardware/nexus/interfaces/power/1.0/))
+  LOCAL_CFLAGS += -DPOWER_HAS_NEXUS_HINTS
+endif
+
 # Enables the advanced mutex-protection for better protection
 # against problems with multithreading, may cause certain
 # deadlocks, but is still recommended
