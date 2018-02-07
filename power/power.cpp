@@ -370,6 +370,7 @@ if (assert_cpugov_file(core, "boostpulse_duration") &&
 	{
 		// found boost-files, use them
 		power_boostpulse_cpu_cpugov(core, duration);
+        return;
 	}
 
 fallback:
