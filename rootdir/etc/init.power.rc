@@ -554,4 +554,5 @@ on charger
     write /sys/class/power_supply/battery/batt_update_data "/efs/Battery/battery_data.dat"
     class_start charger
 
-
+#set only lcd by default in power suspend
+    echo 3 > /sys/kernel/power_suspend/power_suspend_mode
