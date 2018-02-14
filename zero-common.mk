@@ -169,10 +169,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.exynos5 \
-    libpower-config \
-    libzeropowersettings_jni \
-    ZeroPowerSettings
+    power.universal7420
 
 # common build properties
 PRODUCT_PROPERTY_OVERRIDES += \
