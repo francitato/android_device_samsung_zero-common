@@ -212,7 +212,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_small_cache_height=1024 \
     ro.hwui.text_large_cache_width=4096 \
     ro.hwui.text_large_cache_height=2048
-    
+ 
+# HWC
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwc.otf=1 \
+    debug.hwc.winupdate=1
+
 # media build properties
 PRODUCT_PROPERTY_OVERRIDES += \
 	media.sf.omx-plugin=libffmpeg_omx.so,libsomxcore.so 
