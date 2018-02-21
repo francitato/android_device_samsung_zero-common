@@ -3,7 +3,6 @@ import init.wifi.rc
 import init.baseband.rc
 import init.carrier.rc
 import init.power.rc
-import init.battery.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
@@ -202,7 +201,6 @@ on post-fs-data
     chown radio system /efs/bluetooth
     chmod 0775 /efs/bluetooth
 
-<<<<<<< HEAD:rootdir/etc/init.samsungexynos7420.rc
 on init
 
     write /proc/sys/kernel/sched_compat_yield 1
@@ -242,8 +240,6 @@ on init
     # set permission to 0660 for camera preview lagging
     chmod 0660 /sys/kernel/hmp/down_threshold
 	
-=======
->>>>>>> fd540ae... zero: put battery- and power-ramdisk settings into extra files:ramdisk/init.samsungexynos7420.rc
 on early-boot
   
 # Remove symlinks to avoid issues with migrate after nandroid restores
@@ -253,7 +249,6 @@ on early-boot
 
 on boot
 
-<<<<<<< HEAD:rootdir/etc/init.samsungexynos7420.rc
     # Change permission for dvfshelper
     chown radio system /sys/power/cpufreq_table
     chmod 0664 /sys/power/cpufreq_table
@@ -532,9 +527,6 @@ on boot
     write /sys/power/ipa/control_temp 65
 
     # Set vibrator intensity 75%
-=======
-# Set vibrator intensity 75%
->>>>>>> fd540ae... zero: put battery- and power-ramdisk settings into extra files:ramdisk/init.samsungexynos7420.rc
     write /sys/devices/virtual/timed_output/vibrator/intensity 7500
 
     #setprop ro.radio.noril yes
@@ -956,7 +948,6 @@ on fs
     chown radio system /sys/class/secgpio_check/secgpio_check_all/gpiosleep_check
     chown radio system /sys/class/secgpio_check/secgpio_check_all/checked_sleepGPIO
 
-<<<<<<< HEAD:rootdir/etc/init.samsungexynos7420.rc
   # permission for CHARGING
    mkdir /efs/Battery 0775 radio system
    chown radio system /efs/Battery
@@ -1105,8 +1096,6 @@ on fs
    chown system system /efs/FactoryApp/cisd_data
    chmod 0640 /efs/FactoryApp/cisd_data
 
-=======
->>>>>>> fd540ae... zero: put battery- and power-ramdisk settings into extra files:ramdisk/init.samsungexynos7420.rc
 # Sensors permissions
 # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
@@ -1204,7 +1193,6 @@ on property:sys.boot_completed=1
     restorecon /data/data/com.android.providers.telephony/databases
     restorecon /data/data/com.android.providers.telephony/shared_prefs
 
-<<<<<<< HEAD:rootdir/etc/init.samsungexynos7420.rc
 on charger
 
     chmod 0664 /sys/class/power_supply/battery/batt_temp_table
@@ -1235,8 +1223,6 @@ on property:ro.bootmode=charger
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor powersave
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor powersave
     
-=======
->>>>>>> fd540ae... zero: put battery- and power-ramdisk settings into extra files:ramdisk/init.samsungexynos7420.rc
 # Do not set any USB mode while charging
     setprop sys.usb.config charging
 
