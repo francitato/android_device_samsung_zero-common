@@ -195,6 +195,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bq.gpu_to_cpu_unsupported=1 \
     video.accelerate.hw=1 \
     ro.sys.fw.dex2oat_thread_count=4 \
+    debug.performance.tuning=1 \
+    pm.sleep_mode=1 \
+    ro.ril.disable.power.collapse=1 \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heapgrowthlimit=256m \
     dalvik.vm.heapsize=512m \
@@ -249,7 +252,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Disable Scrolling Cache For Smoother Scrolling
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.scrollingcache=4
+    persist.sys.scrollingcache=1 \
+	persist.sys.purgeable_assets=1 \
+	ro.compcache.default=18 \
+	ro.max.fling_velocity=12000 \
+	ro.min.fling_velocity=8000
     
 # Ramdisk
 PRODUCT_PACKAGES += \
