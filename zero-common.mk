@@ -186,25 +186,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio_hal.force_voice_config=wide \
     ro.nfc.sec_hal=true \
     wifi.interface=wlan0 \
-    ro.sf.disable_triple_buffer=0 \
-    debug.sf.latch_unsignaled=1 \
-    debug.hwc.max_hw_overlays=6 \
-    debug.hwc.winupdate=1 \
-    debug.egl.hw=0 \
-    debug.sf.hw=0 \
-    persist.sys.ui.hw=0 \
     ro.bq.gpu_to_cpu_unsupported=1 \
-    video.accelerate.hw=1 \
-    ro.sys.fw.dex2oat_thread_count=4 \
+    ro.sf.disable_triple_buffer=0 \
+    debug.sf.latch_unsignaled=1
     debug.performance.tuning=1 \
     pm.sleep_mode=1 \
-    ro.ril.disable.power.collapse=1 \
+    ro.ril.disable.power.collapse=1 
+    
+#Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heapgrowthlimit=256m \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=2m \
-    dalvik.vm.heapmaxfree=8m \
+    dalvik.vm.heapmaxfree=8m
+    
+#Wm-machine
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=88 \
     ro.hwui.layer_cache_size=58 \
     ro.hwui.path_cache_size=16 \
@@ -221,7 +220,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # HWC
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.otf=1 \
-    debug.hwc.winupdate=1
+    debug.hwc.winupdate=1 \
+    debug.hwc.force_gpu=0 \
+    debug.hwc.max_hw_overlays=1 \
+    debug.egl.hw=1 \
+    debug.sf.hw=1 \
+    persist.sys.ui.hw=true \
+    video.accelerate.hw=1 \
+    debug.egl.profiler=1 
 
 # media build properties
 PRODUCT_PROPERTY_OVERRIDES += \
