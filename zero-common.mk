@@ -221,6 +221,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.otf=1 \
     debug.hwc.winupdate=1 \
+    debug.sf.disable_color_matrix=1 \
     debug.hwc.force_gpu=0 
 
 # media build properties
